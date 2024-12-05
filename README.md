@@ -13,6 +13,33 @@ npm i -g @nestjs/cli
 nest new hello-nestjs
 ```
 
+### 모듈 생성하기
+
+src/ 내에 `module name` directory 가 생성됨
+
+```
+nest g module `module name`
+```
+
+
+### Controller 생성하기
+
+`module name` 에 해당하는 module 에 controller 를 생성함
+
+`--no-spec` 옵션은 spec 파일을 생성하지 않음
+
+```
+nest g controller `module name` --no-spec
+```
+
+
+### Service 생성하기
+
+`module name` 에 해당하는 module 에 service 를 생성함
+
+```
+nest g service boards --no-spec
+```
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
