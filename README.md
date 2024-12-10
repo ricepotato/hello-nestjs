@@ -41,6 +41,14 @@ nest g controller `module name` --no-spec
 nest g service boards --no-spec
 ```
 
+
+### DTO
+
+데이터 유효성 검증
+
+더 안정적인 코드를 만들어 줌
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
