@@ -49,13 +49,43 @@ nest g service boards --no-spec
 더 안정적인 코드를 만들어 줌
 
 
-### Pipes
+### Pipes levels
 
 Handler level
 
 parameter level
 
 global level
+
+
+### Custom Pipe
+
+`import { PipeTransform } from '@nestjs/common';`
+
+PipeTransform 을 구현한 class 를 만든다.
+
+
+`transform` method 를 구현한다.
+
+```typescript
+
+export class BoardStatusValidationPipe implements PipeTransform {
+  readonly StatusOptions = [BoardStatus.PRIVATE, BoardStatus.PUBLIC];
+  transform(value: any) {
+    if (!this.isStatusValid(value)) {
+      throw new BadRequestException(`${value} isn't in the status option`);
+    }
+    return value;
+  }
+
+  private isStatusValid(status: any) {
+    const option = this.StatusOptions.find((option) => option === status);
+    return option !== undefined;
+  }
+}
+
+```
+
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
