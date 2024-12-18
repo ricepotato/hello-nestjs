@@ -43,4 +43,9 @@ export class BoardsController {
   ) {
     return this.boardService.updateBoardStatus(id, status);
   }
+
+  @Get('/')
+  getAllBoard() {
+    return this.boardService.getAllBoards();
+  }
 }
