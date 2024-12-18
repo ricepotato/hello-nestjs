@@ -97,3 +97,9 @@ npm install pg typeorm @nestjs/typeorm --save
 document
 
 https://docs.nestjs.com/techniques/database
+
+#### remove() vs delete()
+
+remove 는 삭제할 대상이 없는 경우 404 오류
+
+delete 삭제 대상이 있는지 확인하지 않음
