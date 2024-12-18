@@ -22,6 +22,11 @@ nest g module `module name`
 ```
 
 
+```
+nest g module boards
+nest g module auth
+```
+
 ### Controller 생성하기
 
 `module name` 에 해당하는 module 에 controller 를 생성함
@@ -30,6 +35,7 @@ nest g module `module name`
 
 ```
 nest g controller `module name` --no-spec
+
 ```
 
 
